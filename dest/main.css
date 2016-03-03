@@ -164,7 +164,7 @@ h1 {
       padding: 0.5em;
       font-size: 0.7em; }
 
-.women__card--small, .women__card--big {
+.women__card--small, .women__card--big, .men__card--small, .men__card--big {
   height: 200px;
   margin-bottom: 1em; }
 
@@ -193,8 +193,7 @@ h1 {
     margin: 0 0em 0 1em; }
   .header__nav {
     width: calc(100% - 1em);
-    margin: 0 0em 0 1em;
-    height: 100%; }
+    margin: 0 0em 0 1em; }
     .header__nav__top {
       -webkit-box-pack: end;
       -webkit-justify-content: flex-end;
@@ -245,6 +244,95 @@ h1 {
   background-position: center;
   background-size: 100% 100%; }
 
+.men h1 {
+  text-align: center; }
+
+.men__wrapper {
+  width: 90%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100%;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: start;
+  -webkit-align-items: flex-start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-flex-flow: row wrap;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  padding: 0;
+  margin: auto; }
+  .men__wrapper .men-left {
+    width: calc(50% - 0.5em);
+    margin: 0 0.5em 0 0em; }
+  .men__wrapper .men-right {
+    width: calc(50% - 0.5em);
+    margin: 0 0 0 0.5em; }
+
+.men__card--small {
+  background-image: url("http://a1.ocimage.us/pimg/160535_1.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100% 100%; }
+
+.men__card--big {
+  background-image: url("http://a1.ocimage.us/pimg/160937_1.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100% 100%; }
+
+.blog {
+  width: 90%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  height: 600px;
+  -webkit-box-pack: end;
+  -webkit-justify-content: flex-end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-flex-flow: row wrap;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  padding: 0;
+  margin: auto;
+  -webkit-align-content: space-between;
+      -ms-flex-line-pack: justify;
+          align-content: space-between; }
+  .blog h1 {
+    width: 100%;
+    text-align: center; }
+  .blog__article--big {
+    height: 250px;
+    width: calc(100% - 0em);
+    margin: 0 0em 0 0em;
+    background-image: url("https://www.openingceremony.us/userfiles/image/news/2016-3/march2016/030116-aalto-pfw-fw16/_mg_5417.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100% 100%; }
+  .blog__article--bottom-left {
+    height: 250px;
+    width: calc(50% - 0.25em);
+    margin: 0 0.25em 0 0em;
+    background-image: url("https://www.openingceremony.us/userfiles/image/news/2016-3/march2016/030216-yproject-pfw-fw16/5.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100% 100%; }
+  .blog__article--bottom-right {
+    height: 250px;
+    width: calc(50% - 0.25em);
+    margin: 0 0em 0 0.25em;
+    background-image: url("https://www.openingceremony.us/userfiles/image/news/2016-3/march2016/030216-yproject-pfw-fw16/6.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100% 100%; }
+
 .hero {
   width: 90%;
   display: -webkit-box;
@@ -270,5 +358,8 @@ h1 {
   background-position: center;
   background-size: auto 100%;
   color: white; }
+  @media screen and (min-width: 700px) {
+    .hero {
+      height: 600px; } }
 
 /*# sourceMappingURL=main.css.map */

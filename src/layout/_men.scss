@@ -1,0 +1,27 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the men of the site/application.
+// -----------------------------------------------------------------------------
+.men{
+  h1 {
+    text-align: center;
+  }
+  @include e("wrapper") {
+    @include flex-container(90%, $flex-flow: row wrap);
+    .men-left {
+      @include col-width(50%, 0em, 0.5em);
+    }
+    .men-right {
+      @include col-width(50%, 0.5em, 0);
+    }
+  }
+  @include e("card") {
+    @include m("small") {
+      @extend %card--small;
+      @include bg-img("http://a1.ocimage.us/pimg/160535_1.jpg");
+    }
+    @include m("big") {
+      @extend %card--small;
+      @include bg-img("http://a1.ocimage.us/pimg/160937_1.jpg");
+    }
+  }
+}

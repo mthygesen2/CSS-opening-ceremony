@@ -1,0 +1,30 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the blog of the site/application.
+// -----------------------------------------------------------------------------
+
+.blog {
+  h1 {
+    width: 100%;
+    text-align: center;
+  }
+  @include flex-container(90%, 600px, flex-end, null, row wrap );
+  align-content: space-between;
+  @include e("article") {
+    @include m("big") {
+      height: 250px;
+      // margin-bottom: 1em;
+      @include col-width(100%);
+      @include bg-img("https://www.openingceremony.us/userfiles/image/news/2016-3/march2016/030116-aalto-pfw-fw16/_mg_5417.jpg");
+    }
+    @include m("bottom-left") {
+      height: 250px;
+      @include col-width(50%, 0em, 0.25em);
+      @include bg-img("https://www.openingceremony.us/userfiles/image/news/2016-3/march2016/030216-yproject-pfw-fw16/5.jpg");
+    }
+    @include m("bottom-right") {
+      height: 250px;
+      @include col-width(50%, 0.25em, 0em);
+      @include bg-img("https://www.openingceremony.us/userfiles/image/news/2016-3/march2016/030216-yproject-pfw-fw16/6.jpg");
+    }
+  }
+}

@@ -49,7 +49,7 @@
 	}
 }
 
-@mixin flex-container($width: 100%, $height: 100%, $justify: flex-start, $align: flex-start, $flex-flow: row nowrap,$padding: 0){
+@mixin flex-container($width: 100%, $height: 100%, $justify: flex-start, $align: flex-start, $flex-flow: row nowrap,$padding: 0) {
   width: $width;
   display: flex;
   height: $height;
@@ -60,7 +60,7 @@
   margin: auto;
 }
 
-@mixin bg-img($url, $width : 100%, $height: 100%){
+@mixin bg-img($url, $width : 100%, $height: 100%) {
 background-image: url($url);
 background-repeat: no-repeat;
 background-position: center;

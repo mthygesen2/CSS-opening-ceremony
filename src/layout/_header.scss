@@ -9,7 +9,6 @@
   }
   @include e("nav") {
     @include col-width(100%, 1em);
-    height: 100%;
     @include e("top") {
       @extend %header__nav;
       justify-content: flex-end;
