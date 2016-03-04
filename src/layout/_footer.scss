@@ -1,3 +1,25 @@
 // -----------------------------------------------------------------------------
 // This file contains all styles related to the footer of the site/application.
 // -----------------------------------------------------------------------------
+
+.footer {
+  @extend %section;
+  @extend %h1;
+  @include e("contact") {
+    @include flex-container($flex-flow: row wrap, $padding: 0.25em);
+    @include m("about") {
+      @include col-width(50%, 0, 0.5em);
+      margin-bottom: 1em;
+    }
+    @include m("service") {
+      @include col-width(50%);
+    }
+    @include m("mailing") {
+      @include col-width(50%, 0, 0.5em);
+      margin-bottom: 1em;
+    }
+    @include m("social") {
+      @include col-width(50%);
+    }
+  }
+}

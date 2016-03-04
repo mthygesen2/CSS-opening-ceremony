@@ -155,8 +155,9 @@ h1 {
       -ms-flex-flow: row nowrap;
           flex-flow: row nowrap;
   padding: 0;
-  margin: auto;
-  list-style: none; }
+  margin: 0 auto;
+  list-style: none;
+  border-bottom: 1px solid black; }
   .header__nav__top li, .header__nav__middle li, .header__nav__bottom li {
     margin-right: 0.5em; }
     .header__nav__top li a, .header__nav__middle li a, .header__nav__bottom li a {
@@ -167,9 +168,76 @@ h1 {
 .women__card--small, .women__card--big, .men__card--small, .men__card--big {
   height: 200px;
   margin-bottom: 1em; }
+  .women__card--small:last-child, .women__card--big:last-child, .men__card--small:last-child, .men__card--big:last-child {
+    margin-bottom: 0; }
+  @media screen and (min-width: 700px) {
+    .women__card--small, .women__card--big, .men__card--small, .men__card--big {
+      height: 300px; } }
+
+.footer h1, .women h1, .men h1, .blog h1 {
+  width: 100%;
+  text-align: center;
+  margin: 1em auto;
+  border-top: 1px solid black;
+  border-bottom: 1px solid black; }
+
+.footer, .women, .men {
+  width: 90%;
+  margin: auto; }
+
+.women .women-left, .men__wrapper .men-left {
+  width: calc(50% - 0.5em);
+  margin: 0 0.5em 0 0em; }
+  @media screen and (min-width: 700px) {
+    .women .women-left, .men__wrapper .men-left {
+      width: calc(34% - 1em);
+      margin: 0 1em 0 0em; } }
+
+.women .women-right, .men__wrapper .men-right {
+  width: calc(50% - 0.5em);
+  margin: 0 0 0 0.5em; }
+  @media screen and (min-width: 700px) {
+    .women .women-right, .men__wrapper .men-right {
+      width: 66%;
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      height: 100%;
+      -webkit-box-pack: start;
+      -webkit-justify-content: flex-start;
+          -ms-flex-pack: start;
+              justify-content: flex-start;
+      -webkit-box-align: start;
+      -webkit-align-items: flex-start;
+          -ms-flex-align: start;
+              align-items: flex-start;
+      -webkit-flex-flow: row wrap;
+          -ms-flex-flow: row wrap;
+              flex-flow: row wrap;
+      padding: 0;
+      margin: 0 auto;
+      -webkit-align-content: space-between;
+          -ms-flex-line-pack: justify;
+              align-content: space-between; }
+      .women .women-right > :last-child, .men__wrapper .men-right > :last-child {
+        width: calc(50% - 0em);
+        margin: 0 0em 0 0em; }
+      .women .women-right > :nth-child(2), .men__wrapper .men-right > :nth-child(2) {
+        width: calc(50% - 1em);
+        margin: 0 1em 0 0; } }
+
+.blog__article--big, .blog__article--bottom-left, .blog__article--bottom-right {
+  height: 250px; }
+  @media screen and (min-width: 700px) {
+    .blog__article--big, .blog__article--bottom-left, .blog__article--bottom-right {
+      height: 400px; } }
+  @media screen and (min-width: 1000px) {
+    .blog__article--big, .blog__article--bottom-left, .blog__article--bottom-right {
+      height: 600px; } }
 
 .header {
-  width: 100%;
+  width: 90%;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -186,25 +254,60 @@ h1 {
   -webkit-flex-flow: column nowrap;
       -ms-flex-flow: column nowrap;
           flex-flow: column nowrap;
-  padding: 0.5em;
-  margin: auto; }
+  padding: 0;
+  margin: 0 auto; }
   .header__brand {
-    width: calc(100% - 1em);
-    margin: 0 0em 0 1em; }
+    width: calc(100% - 0em);
+    margin: 0 0em 0 0em;
+    background-color: black;
+    color: white;
+    padding: 1em 0; }
   .header__nav {
-    width: calc(100% - 1em);
-    margin: 0 0em 0 1em; }
+    width: calc(100% - 0em);
+    margin: 0 0em 0 0em; }
     .header__nav__top {
       -webkit-box-pack: end;
       -webkit-justify-content: flex-end;
           -ms-flex-pack: end;
               justify-content: flex-end; }
 
-.women h1 {
-  text-align: center; }
+.footer__contact {
+  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100%;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: start;
+  -webkit-align-items: flex-start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-flex-flow: row wrap;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  padding: 0.25em;
+  margin: 0 auto; }
+  .footer__contact--about {
+    width: calc(50% - 0.5em);
+    margin: 0 0.5em 0 0;
+    margin-bottom: 1em; }
+  .footer__contact--service {
+    width: calc(50% - 0em);
+    margin: 0 0em 0 0em; }
+  .footer__contact--mailing {
+    width: calc(50% - 0.5em);
+    margin: 0 0.5em 0 0;
+    margin-bottom: 1em; }
+  .footer__contact--social {
+    width: calc(50% - 0em);
+    margin: 0 0em 0 0em; }
 
 .women__wrapper {
-  width: 90%;
+  width: 100%;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -222,15 +325,7 @@ h1 {
       -ms-flex-flow: row wrap;
           flex-flow: row wrap;
   padding: 0;
-  margin: auto; }
-
-.women .women-left {
-  width: calc(50% - 0.5em);
-  margin: 0 0.5em 0 0em; }
-
-.women .women-right {
-  width: calc(50% - 0.5em);
-  margin: 0 0 0 0.5em; }
+  margin: 0 auto; }
 
 .women__card--small {
   background-image: url("http://a1.ocimage.us/pimg/161053_1.jpg");
@@ -243,11 +338,91 @@ h1 {
   background-repeat: no-repeat;
   background-position: center;
   background-size: 100% 100%; }
+  @media screen and (min-width: 700px) {
+    .women__card--big {
+      height: 620px;
+      width: calc(100% - 0em);
+      margin: 0 0em 0 0em;
+      margin-bottom: 1em; } }
 
-.men h1 {
-  text-align: center; }
+@media screen and (min-width: 1000px) {
+  .women {
+    width: calc(45% - 1em);
+    margin-left: 5%;
+    margin-right: 1em; } }
+
+body {
+  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100%;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: start;
+  -webkit-align-items: flex-start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-flex-flow: row wrap;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  padding: 0;
+  margin: 0 auto;
+  max-width: 1300px; }
 
 .men__wrapper {
+  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100%;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: start;
+  -webkit-align-items: flex-start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-flex-flow: row wrap;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  padding: 0;
+  margin: 0 auto; }
+
+.men__card--small {
+  background-image: url("http://a1.ocimage.us/pimg/160535_1.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100% 100%; }
+
+.men__card--big {
+  background-image: url("http://a1.ocimage.us/pimg/160937_1.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100% 100%; }
+  @media screen and (min-width: 700px) {
+    .men__card--big {
+      height: 620px;
+      width: calc(100% - 0em);
+      margin: 0 0em 0 0em;
+      margin-top: 1em;
+      -webkit-box-ordinal-group: 2;
+      -webkit-order: 1;
+          -ms-flex-order: 1;
+              order: 1; } }
+
+@media screen and (min-width: 1000px) {
+  .men {
+    width: 45%;
+    margin-left: 0;
+    margin-right: 5%; } }
+
+.blog {
   width: 90%;
   display: -webkit-box;
   display: -webkit-flex;
@@ -266,72 +441,50 @@ h1 {
       -ms-flex-flow: row wrap;
           flex-flow: row wrap;
   padding: 0;
-  margin: auto; }
-  .men__wrapper .men-left {
-    width: calc(50% - 0.5em);
-    margin: 0 0.5em 0 0em; }
-  .men__wrapper .men-right {
-    width: calc(50% - 0.5em);
-    margin: 0 0 0 0.5em; }
-
-.men__card--small {
-  background-image: url("http://a1.ocimage.us/pimg/160535_1.jpg");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: 100% 100%; }
-
-.men__card--big {
-  background-image: url("http://a1.ocimage.us/pimg/160937_1.jpg");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: 100% 100%; }
-
-.blog {
-  width: 90%;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  height: 600px;
-  -webkit-box-pack: end;
-  -webkit-justify-content: flex-end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
-  -webkit-flex-flow: row wrap;
-      -ms-flex-flow: row wrap;
-          flex-flow: row wrap;
-  padding: 0;
-  margin: auto;
-  -webkit-align-content: space-between;
-      -ms-flex-line-pack: justify;
-          align-content: space-between; }
-  .blog h1 {
-    width: 100%;
-    text-align: center; }
+  margin: 0 auto; }
   .blog__article--big {
-    height: 250px;
     width: calc(100% - 0em);
     margin: 0 0em 0 0em;
+    margin-bottom: 1em;
     background-image: url("https://www.openingceremony.us/userfiles/image/news/2016-3/march2016/030116-aalto-pfw-fw16/_mg_5417.jpg");
     background-repeat: no-repeat;
     background-position: center;
     background-size: 100% 100%; }
+    @media screen and (min-width: 1000px) {
+      .blog__article--big {
+        width: calc(75% - 1em);
+        margin: 0 1em 0 0;
+        margin-bottom: 1em; } }
   .blog__article--bottom-left {
-    height: 250px;
-    width: calc(50% - 0.25em);
-    margin: 0 0.25em 0 0em;
+    width: calc(50% - 0.5em);
+    margin: 0 0.5em 0 0em;
     background-image: url("https://www.openingceremony.us/userfiles/image/news/2016-3/march2016/030216-yproject-pfw-fw16/5.jpg");
     background-repeat: no-repeat;
     background-position: center;
     background-size: 100% 100%; }
+    @media screen and (min-width: 1000px) {
+      .blog__article--bottom-left {
+        width: calc(37.5% - 1em);
+        margin: 0 1em 0 0; } }
   .blog__article--bottom-right {
-    height: 250px;
-    width: calc(50% - 0.25em);
-    margin: 0 0em 0 0.25em;
+    width: calc(50% - 0.5em);
+    margin: 0 0em 0 0.5em;
     background-image: url("https://www.openingceremony.us/userfiles/image/news/2016-3/march2016/030216-yproject-pfw-fw16/6.jpg");
     background-repeat: no-repeat;
     background-position: center;
     background-size: 100% 100%; }
+    @media screen and (min-width: 1000px) {
+      .blog__article--bottom-right {
+        width: calc(37.5% - 1em);
+        margin: 0 1em 0 0; } }
+  .blog__aside {
+    display: none; }
+    @media screen and (min-width: 1000px) {
+      .blog__aside {
+        display: block;
+        background-color: black;
+        height: 600px;
+        width: 25%; } }
 
 .hero {
   width: 90%;
@@ -352,7 +505,7 @@ h1 {
       -ms-flex-flow: column;
           flex-flow: column;
   padding: 0.5em;
-  margin: auto;
+  margin: 0 auto;
   background-image: url("https://www.openingceremony.us/userfiles/image/news/2016-3/march2016/030116-aalto-pfw-fw16/_mg_5417.jpg");
   background-repeat: no-repeat;
   background-position: center;
@@ -361,5 +514,8 @@ h1 {
   @media screen and (min-width: 700px) {
     .hero {
       height: 600px; } }
+  @media screen and (min-width: 1000px) {
+    .hero {
+      height: 900px; } }
 
 /*# sourceMappingURL=main.css.map */

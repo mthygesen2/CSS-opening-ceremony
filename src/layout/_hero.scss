@@ -7,6 +7,9 @@
   @media screen and (min-width: 700px) {
     height: 600px;
   }
+  @media screen and (min-width: 1000px) {
+    height: 900px;
+  }
   @include bg-img("https://www.openingceremony.us/userfiles/image/news/2016-3/march2016/030116-aalto-pfw-fw16/_mg_5417.jpg", auto);
   color: white;
 }

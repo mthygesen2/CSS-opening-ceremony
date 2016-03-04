@@ -57,6 +57,7 @@
 %header__nav {
   @include flex-container();
   list-style: none;
+  border-bottom: 1px solid black;
   li {
     margin-right: 0.5em;
     a {
@@ -70,4 +71,56 @@
 %card--small{
   height: 200px;
   margin-bottom: 1em;
+  &:last-child{
+    margin-bottom: 0;
+  }
+  @media screen and (min-width: 700px) {
+    height: 300px;
+  }
+}
+
+%h1 {
+ h1{
+    width: 100%;
+    text-align: center;
+    margin: 1em auto;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+ }
+}
+
+%section {
+  width: 90%;
+  margin: auto;
+}
+
+%col-33 {
+  @include col-width(50%, 0em, 0.5em);
+  @media screen and (min-width: 700px) {
+    @include col-width(34%, 0em, 1em);
+  }
+}
+
+ %col-66 {
+   @include col-width(50%, 0.5em, 0);
+   @media screen and (min-width: 700px) {
+     @include flex-container(66%, $flex-flow: row wrap);
+     align-content: space-between;
+     & > :last-child{
+       @include col-width(50%);
+     }
+     & > :nth-child(2){
+       @include col-width(50%, 0, 1em);
+     }
+   }
+ }
+
+%blog-card {
+  height: 250px;
+ @media screen and (min-width: 700px) {
+   height: 400px;
+ }
+  @media screen and (min-width: 1000px) {
+    height: 600px;
+  }
 }

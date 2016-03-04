@@ -3,28 +3,43 @@
 // -----------------------------------------------------------------------------
 
 .blog {
-  h1 {
-    width: 100%;
-    text-align: center;
-  }
-  @include flex-container(90%, 600px, flex-end, null, row wrap );
-  align-content: space-between;
+  @extend %h1;
+  @include flex-container(90%,100%, flex-start, flex-start, row wrap);
   @include e("article") {
     @include m("big") {
-      height: 250px;
-      // margin-bottom: 1em;
+      @extend %blog-card;
       @include col-width(100%);
+      margin-bottom: 1em;
       @include bg-img("https://www.openingceremony.us/userfiles/image/news/2016-3/march2016/030116-aalto-pfw-fw16/_mg_5417.jpg");
+      @media screen and (min-width: 1000px) {
+        @include col-width(75%, 0, 1em);
+        margin-bottom: 1em;
+      }
     }
     @include m("bottom-left") {
-      height: 250px;
-      @include col-width(50%, 0em, 0.25em);
+      @extend %blog-card;
+      @include col-width(50%, 0em, 0.5em);
       @include bg-img("https://www.openingceremony.us/userfiles/image/news/2016-3/march2016/030216-yproject-pfw-fw16/5.jpg");
+      @media screen and (min-width: 1000px) {
+        @include col-width(37.5%, 0, 1em);
+      }
     }
     @include m("bottom-right") {
-      height: 250px;
-      @include col-width(50%, 0.25em, 0em);
+      @extend %blog-card;
+      @include col-width(50%, 0.5em, 0em);
       @include bg-img("https://www.openingceremony.us/userfiles/image/news/2016-3/march2016/030216-yproject-pfw-fw16/6.jpg");
+      @media screen and (min-width: 1000px) {
+        @include col-width(37.5%, 0, 1em);
+      }
+    }
+  }
+  @include e("aside") {
+    display: none;
+    @media screen and (min-width: 1000px) {
+      display: block;
+      background-color: black;
+      height: 600px;
+      width: 25%;
     }
   }
 }
