@@ -3,7 +3,7 @@
 // -----------------------------------------------------------------------------
 
 .header {
-  @include flex-container(90%, 100%, $flex-flow: column nowrap);
+  @include flex-container(100%, 100%, $flex-flow: column nowrap);
   @include e("brand") {
     @include col-width(100%);
     background-color: black;

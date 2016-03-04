@@ -3,23 +3,37 @@
 // -----------------------------------------------------------------------------
 
 .footer {
-  @extend %section;
+  width: 100%;
   @extend %h1;
   @include e("contact") {
     @include flex-container($flex-flow: row wrap, $padding: 0.25em);
     @include m("about") {
       @include col-width(50%, 0, 0.5em);
       margin-bottom: 1em;
+      @extend %footer-card;
     }
     @include m("service") {
       @include col-width(50%);
+      @extend %footer-card;
     }
     @include m("mailing") {
       @include col-width(50%, 0, 0.5em);
+      @extend %footer-card;
       margin-bottom: 1em;
     }
     @include m("social") {
       @include col-width(50%);
+      @media screen and (min-width: 700px) {
+        @include col-width(25%);
+        text-align: center;
+      }
     }
+  }
+}
+
+%footer-card {
+  @media screen and (min-width: 700px) {
+    @include col-width(25%, 0, 1em);
+    text-align: center;
   }
 }
